@@ -23,7 +23,8 @@ const provider = new ethers.JsonRpcProvider(RPC_URL);
 const signer = new ethers.Wallet(PRIVATE_KEY, provider);
 
 // ABI
-const abi = JSON.parse(fs.readFileSync("./abi/PrivateScore.json", "utf8"));
+const raw = JSON.parse(fs.readFileSync("./abi/PrivateScore.json", "utf8"));
+const abi = raw.abi;
 const contract = new ethers.Contract(CONTRACT_ADDRESS, abi, signer);
 
 // ===================================================

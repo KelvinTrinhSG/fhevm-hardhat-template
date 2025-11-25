@@ -1,5 +1,6 @@
 {
   "name": "fhevm-backend",
+  "type": "module",
   "version": "1.0.0",
   "dependencies": {
     "@zama-fhe/relayer-sdk": "latest",
